@@ -107,6 +107,9 @@ class Airport(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        ordering = ['-created_at']
 
 class Aeroplane(models.Model):
     aeroplane_id=models.CharField(max_length=255,unique=True)
